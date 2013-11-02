@@ -1,0 +1,19 @@
+alias netstat="sudo netstat -tulpen"
+alias ls="ls --color=auto"
+alias pebbles="git checkout release/pebbles/master"
+alias roxy="git checkout release/roxy/master"
+
+if [ -x $(command -v zypper) ]
+then
+  alias zypper="sudo zypper"
+fi
+
+if [ -x $(command -v osc) ]
+then
+  alias isc="osc -A i"
+fi
+
+if [ -x $(command -v irssi) ]
+then
+  alias irssi="screen -c ~/.irssi/screenrc -S irssi irssi"
+fi
