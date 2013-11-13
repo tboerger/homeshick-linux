@@ -3,3 +3,9 @@ alias ls="ls --color=auto"
 alias aptitude="sudo aptitude"
 alias zypper="sudo zypper"
 alias isc="osc -A i"
+
+if hash yakuake 2> /dev/null
+then
+  alias ysess-save="ysess -o ${HOME}/.ysess.ini --force-overwrite"
+  alias ysess-restore="ysess -i ${HOME}/.ysess.ini"
+fi
