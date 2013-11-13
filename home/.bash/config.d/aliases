@@ -6,6 +6,6 @@ alias isc="osc -A i"
 
 if hash yakuake 2> /dev/null
 then
-  alias ysess-save="ysess -o ${HOME}/.ysess.ini --force-overwrite"
-  alias ysess-restore="ysess -i ${HOME}/.ysess.ini"
+  alias ysess-save="(ysess -o ${HOME}/.ysess.ini --force-overwrite &) 2> /dev/null"
+  alias ysess-restore="(ysess -i ${HOME}/.ysess.ini &) 2> /dev/null"
 fi
