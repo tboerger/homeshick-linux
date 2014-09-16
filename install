@@ -1,7 +1,6 @@
 #!/bin/bash
 
 CASTLE_NAME="homeshick-linux"
-GITFLOW_URL="https://raw.github.com/nvie/gitflow/develop/contrib/gitflow-installer.sh"
 
 if [ -f /etc/debian_version ]
 then
@@ -22,11 +21,6 @@ then
   then
     sudo apt-get install git-core
   fi
-
-  if ! hash git-flow 2> /dev/null
-  then
-    curl ${GITFLOW_URL} | sudo bash
-  fi
 fi
 
 if [ -f /etc/SuSE-release ]
@@ -40,20 +34,13 @@ then
   installed=$(zypper se -i bash-completion > /dev/null 2>&1)
   if [ $? -eq 1 ]
   then
-    sudo apt-get install bash bash-completion 
+    sudo zypper install bash bash-completion 
   fi
 
   installed=$(zypper se -i git > /dev/null 2>&1)
   if [ $? -eq 1 ]
   then
-    sudo apt-get install git
-  fi
-
-  sudo zypper install git bash bash-completion
-
-  if ! hash git-flow 2> /dev/null
-  then
-    curl ${GITFLOW_URL} | sudo bash
+    sudo zypper install git
   fi
 fi
 
@@ -75,11 +62,6 @@ then
   if [ $? -eq 1 ]
   then
     brew install git 
-  fi
-
-  if ! hash git-flow 2> /dev/null
-  then
-    curl ${GITFLOW_URL} | sudo bash
   fi
 fi
 
