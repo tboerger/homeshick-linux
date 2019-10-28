@@ -1,7 +1,4 @@
 alias netstat="sudo netstat -tulpen"
-alias aptitude="sudo aptitude"
-alias zypper="sudo zypper"
-alias apt-get="sudo apt-get"
 
 alias ls="ls --color=auto"
 alias title-reset="PROMPT_COMMAND='echo -ne \"\033]0;terminal\007\"'"
