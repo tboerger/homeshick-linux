@@ -1,0 +1,2 @@
+alias netstat="sudo netstat -tulpen"
+alias ls="ls --color=auto"

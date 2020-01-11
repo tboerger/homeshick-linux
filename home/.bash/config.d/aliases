@@ -1,4 +1,0 @@
-alias netstat="sudo netstat -tulpen"
-
-alias ls="ls --color=auto"
-alias title-reset="PROMPT_COMMAND='echo -ne \"\033]0;terminal\007\"'"

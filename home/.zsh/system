@@ -1,0 +1,9 @@
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin"
+
+if [ -d ${HOME}/.bin ]; then
+	export PATH="${HOME}/.bin:${PATH}"
+fi
+
+if [ -d ${HOME}/bin ]; then
+	export PATH="${HOME}/bin:${PATH}"
+fi
