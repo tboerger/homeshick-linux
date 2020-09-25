@@ -1,0 +1,3 @@
+if [[ -f /etc/kubernetes/admin.conf ]]; then
+    export KUBECONFIG=/etc/kubernetes/admin.conf
+fi
