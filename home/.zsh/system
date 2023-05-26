@@ -1,23 +1,27 @@
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin"
 
 if [ -d /usr/share/krew/bin ]; then
-	export PATH="/usr/share/krew/bin:${PATH}"
+  export PATH="/usr/share/krew/bin:${PATH}"
 fi
 
 if [ -d ${HOME}/.krew/bin ]; then
-	export PATH="${HOME}/.krew/bin:${PATH}"
+  export PATH="${HOME}/.krew/bin:${PATH}"
 fi
 
 if [ -d ${HOME}/bin ]; then
-	export PATH="${HOME}/bin:${PATH}"
+  export PATH="${HOME}/bin:${PATH}"
+fi
+
+if [ -d ${HOME}/.bin ]; then
+  export PATH="${HOME}/.bin:${PATH}"
 fi
 
 if [ -d ${HOME}/.local/bin ]; then
-	export PATH="${HOME}/.local/bin:${PATH}"
+  export PATH="${HOME}/.local/bin:${PATH}"
 fi
 
 plugins+=(
-	systemd
-	ubuntu
-	sudo
+  systemd
+  ubuntu
+  sudo
 )
